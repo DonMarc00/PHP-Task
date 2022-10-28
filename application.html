@@ -31,15 +31,11 @@
         <form action="applicationbackend.php" method="post">
             <div class="form">
                 <h3>Titel</h3>
-                <input type="checkbox" class="cb" name="Prof." id="prof"> Prof.
-                <input type="checkbox" class="cb"  name="Dr." id="dr"> Dr.
-                <input type="text" class="vorname" placeholder="Vorname" name="vorname">
-                <label for="vorname" class="vorlabel">Vorname</label>
-                <input type="text" class="vorname" placeholder="Nachname" name="name">
-                <label for="vorname" class="vorlabel">Nachname</label>
-                <input type="text" class="vorname" placeholder="Adresse" name="adresse">
-                <label for="vorname" class="vorlabel">Adresse</label>
-                <input type="date" class="vorname" placeholder="Geburtsdatum" name="gbd">
+                <input type="checkbox" class="cb" name="prof" value="prof." > Prof.
+                <input type="checkbox" class="cb"  name="dr" value="dr."> Dr.
+                <input type="text" class="vorname" placeholder="Name" name="name" required>
+                <label for="vorname" class="vorlabel">Name</label>
+                <input type="date" class="vorname" placeholder="Geburtsdatum" name="gbd" required>
                 <label for="vorname" class="vorlabel">Geburtsdatum</label><br>
                 <input type="submit" class="button" value="Bewerben">
                 <input type="reset" class="button" value="Zurücksetzten">
