@@ -1,0 +1,82 @@
+.inputs{
+    grid-row: 2/span 1;
+    grid-column: 2/span 1;
+    margin: 20px;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+.ltext{
+    text-align: left;
+}
+
+.home{
+  grid-column: 3/span 1;
+  grid-row: 1/span 1;
+}
+
+.field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .field::placeholder {
+    color: transparent;
+  }
+  
+  .field:placeholder-shown~.vorlabel {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .vorlabel {
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  
+  .field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+  }
+  
+  .field:focus~.fieldlabel {
+    top: 0;
+    transition: 0.2s;
+    color: #11998e;
+    font-weight: 700;
+  }
+
+  .button {
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    height: 1.5em;
+    font-family: sans-serif;
+    color: white;
+    background: linear-gradient(to right, darkblue, #31096e);
+    border-width: 0ch;
+    
+  }
+  
+  .button:hover {
+    background: black;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: darkblue;
+  }
+

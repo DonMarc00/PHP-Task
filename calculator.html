@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume calculator</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/calcsheet.css">
+</head>
+
+<body onload="defineArrays" id="body">
+
+    <div class="glitch">MyUtils
+    </div>
+    <a href="index.html"><input type="button" class="home" value="Home"></a>
+    <form method="post" action=""></form>
+    <div class="inputs">
+        <div class="radios">
+            <input type="radio" name="calctype" id="kegel"> Kegel <br><br>
+            <input type="radio" name="calctype" id="pyramide"> Pyramide <br><br>
+            <input type="radio" name="calctype" id="kugel"> Kugel <br><br>
+        </div>
+        <div class="numfields">
+            <input class="field" type="number" name="height" id="height">
+            <label class="fieldlabel" for="height" id="lheight">Höhe</label> <br>
+            <input type="number" class="field" name="width" id="width">
+            <label for="width" class="fieldlabel" id="lwidth">Breite (Grundfläche)</label> <br>
+            <input type="number" class="field" name="length" id="length">
+            <label for="length" class="fieldlabel" id="llength">Länge/Radius (Grundfläche)</label> <br> <br>
+            <input type="submit" value="Berechnen" class="button">
+            <input type="reset" value="Zurücksetzen" class="button">
+        </div>
+    </div>
+    <div class="ltext">
+        <h2>Volumenberechnung</h2> <br>
+        <p>An manche der komplexen Volumenformeln kann man sich einfach nicht mehr erinnern...
+            Wir übernehmen den Job für sie mit der MyUtils Volumenberechnung v. Alpha 0.5.1.
+            <br> Viele der Körper folgen in den kommenden Monaten.
+        </p>
+    </div>
+</body>
+<script defer>
+
+const ids = ["height", "width","length"];
+const lids = ["lheight", "lwidth","llength"]
+var elements = [];
+var labels=[];
+
+document.getElementById("body").addEventListener("load", defineArrays)
+
+var kegel = document.getElementById("kegel");
+var pyramide = document.getElementById("pyramide");
+var kugel = document.getElementById("kugel");
+kegel.addEventListener("change", reveal());
+pyramide.addEventListener("change", reveal());
+kugel.addEventListener("change", reveal());
+
+function defineArrays() {
+for (let i = 0; i < ids.length; i++) {
+    elements[i] = document.getElementById(ids[i]);
+    labels[i] = document.getElementById(lids[i]);
+}}
+
+function hidePair(element, label){
+    element.style.visibility = "hidden";
+    label.style.visibility = "hidden";
+}
+
+function revealAll(){
+    for (let i = 0; i < ids.length; i++) {
+        elements[i].style.visibility = "visible";
+        labels[i].style.visibility = "visible";
+    }
+}
+
+function reveal(){
+    revealAll();
+    if(kegel.checked) hidePair(elements[1], labels[1]);
+    if(kugel.checked) hidePair(elements[0],labels[0]);
+}
+</script>
+
+</html>
