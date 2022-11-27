@@ -10,29 +10,30 @@
     <link rel="stylesheet" href="css/calcsheet.css">
 </head>
 
-<body onload="defineArrays" id="body">
+<body id="body">
 
     <div class="glitch">MyUtils
     </div>
     <a href="index.html"><input type="button" class="home" value="Home"></a>
-    <form method="post" action=""></form>
-    <div class="inputs">
-        <div class="radios">
-            <input type="radio" name="calctype" id="kegel"> Kegel <br><br>
-            <input type="radio" name="calctype" id="pyramide"> Pyramide <br><br>
-            <input type="radio" name="calctype" id="kugel"> Kugel <br><br>
+    <form method="post" action="phpbackend/calcbackend.php">
+        <div class="inputs">
+            <div class="radios">
+                <input type="radio" name="calctype" id="kegel" value="kegel"> Kegel <br><br>
+                <input type="radio" name="calctype" id="pyramide" value="pyramide"> Pyramide <br><br>
+                <input type="radio" name="calctype" id="kugel" value="kugel"> Kugel <br><br>
+            </div>
+            <div class="numfields">
+                <input class="field" type="number" name="height" id="height">
+                <label class="fieldlabel" for="height" id="lheight">Höhe</label> <br>
+                <input type="number" class="field" name="width" id="width">
+                <label for="width" class="fieldlabel" id="lwidth">Breite (Grundfläche)</label> <br>
+                <input type="number" class="field" name="length" id="length">
+                <label for="length" class="fieldlabel" id="llength">Länge/Radius (Grundfläche)</label> <br> <br>
+                <input type="submit" value="Berechnen" class="button">
+                <input type="reset" value="Zurücksetzen" class="button">
+            </div>
         </div>
-        <div class="numfields">
-            <input class="field" type="number" name="height" id="height">
-            <label class="fieldlabel" for="height" id="lheight">Höhe</label> <br>
-            <input type="number" class="field" name="width" id="width">
-            <label for="width" class="fieldlabel" id="lwidth">Breite (Grundfläche)</label> <br>
-            <input type="number" class="field" name="length" id="length">
-            <label for="length" class="fieldlabel" id="llength">Länge/Radius (Grundfläche)</label> <br> <br>
-            <input type="submit" value="Berechnen" class="button">
-            <input type="reset" value="Zurücksetzen" class="button">
-        </div>
-    </div>
+    </form>
     <div class="ltext">
         <h2>Volumenberechnung</h2> <br>
         <p>An manche der komplexen Volumenformeln kann man sich einfach nicht mehr erinnern...
@@ -40,46 +41,41 @@
             <br> Viele der Körper folgen in den kommenden Monaten.
         </p>
     </div>
+    <script>
+
+        var kegel = document.getElementById("kegel");
+        var pyramide = document.getElementById("pyramide");
+        var kugel = document.getElementById("kugel");
+
+        function hidePair(element, label) {
+            document.getElementById(element).style.visibility = "hidden";
+            document.getElementById(label).style.visibility = "hidden";
+        }
+
+        function revealAll() {
+            document.getElementById("height").style.visibility = "visible";
+            document.getElementById("lheight").style.visibility = "visible";
+            document.getElementById("width").style.visibility = "visible";
+            document.getElementById("lwidth").style.visibility = "visible";
+            document.getElementById("llength").style.visibility = "visible";
+            document.getElementById("length").style.visibility = "visible";
+        }
+
+        function reveal() {
+            revealAll();
+            if (kegel.checked) hidePair("width", "lwidth");
+            if (kugel.checked) {
+                hidePair("width", "lwidth");
+                hidePair("height", "lheight");
+            }
+        }
+
+        kegel.addEventListener("change", reveal);
+        pyramide.addEventListener("change", reveal);
+        kugel.addEventListener("change", reveal);
+
+    </script>
+
 </body>
-<script defer>
-
-const ids = ["height", "width","length"];
-const lids = ["lheight", "lwidth","llength"]
-var elements = [];
-var labels=[];
-
-document.getElementById("body").addEventListener("load", defineArrays)
-
-var kegel = document.getElementById("kegel");
-var pyramide = document.getElementById("pyramide");
-var kugel = document.getElementById("kugel");
-kegel.addEventListener("change", reveal());
-pyramide.addEventListener("change", reveal());
-kugel.addEventListener("change", reveal());
-
-function defineArrays() {
-for (let i = 0; i < ids.length; i++) {
-    elements[i] = document.getElementById(ids[i]);
-    labels[i] = document.getElementById(lids[i]);
-}}
-
-function hidePair(element, label){
-    element.style.visibility = "hidden";
-    label.style.visibility = "hidden";
-}
-
-function revealAll(){
-    for (let i = 0; i < ids.length; i++) {
-        elements[i].style.visibility = "visible";
-        labels[i].style.visibility = "visible";
-    }
-}
-
-function reveal(){
-    revealAll();
-    if(kegel.checked) hidePair(elements[1], labels[1]);
-    if(kugel.checked) hidePair(elements[0],labels[0]);
-}
-</script>
 
 </html>

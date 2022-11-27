@@ -81,10 +81,11 @@ body {
     color: white;
     background: linear-gradient(to right, darkblue, #31096e);
     border-width: 0ch;
+    transition: 0.3s;
 }
 
 .home:hover{
-  background: black;
+  background: linear-gradient(to right, black, grey);
   cursor: pointer;
   border-width: 2px;
   border-color: darkblue;

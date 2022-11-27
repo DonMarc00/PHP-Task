@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="appsheet.css">
     <title>Bestätigungsseite</title>
-    <link rel="stylesheet" href="css/appbackendsheet.css">
+    <link rel="stylesheet" href="../css/appbackendsheet.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     $fullname = $fullname . " " . $_POST['name'];
     echo "<div class=\"usercard\">
     <div class=\"picture\">
-        <img src=\"img/Sample_User_Icon.png\">
+        <img src=\"../img/Sample_User_Icon.png\">
     </div>
     <div class=\"content\">
         <div class=\"details\">
