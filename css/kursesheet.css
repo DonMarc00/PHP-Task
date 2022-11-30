@@ -62,12 +62,13 @@ input[type="submit"]:hover{
 
 .fl-table td {
     border-right: 1px solid #f8f8f8;
-    font-size: 12px;
+    font-size: 1em;
 }
 
 .fl-table thead th {
     color: white;
     background: #4FC3A1;
+    font-size: 1.2em;
 }
 
 
