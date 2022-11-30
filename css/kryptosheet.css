@@ -19,3 +19,30 @@ select:focus {
     min-width: 150px;
     width: auto;
 }
+
+input[type="submit"]:hover{
+    background: linear-gradient(to right, black, grey);
+    cursor: pointer;
+    border-width: 2px;
+    border-color: darkblue;
+  }
+
+  input[type="submit"]{
+    grid-column: 3 / span 1;
+      grid-row: 0 /  span 1;
+      border-radius: 50px;
+      font-size: 1.3em;
+      font-weight: 600;
+      height: 1.5em;
+      font-family: sans-serif;
+      color: white;
+      background: linear-gradient(to right, darkblue, #31096e);
+      border-width: 0ch;
+      transition: 0.3s;
+  }
+
+  .control{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+  }

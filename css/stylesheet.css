@@ -69,7 +69,7 @@ body {
 }
 
 
-input[type="button"], input[type="submit"]{
+input[type="button"]{
   grid-column: 3 / span 1;
     grid-row: 0 /  span 1;
     border-radius: 50px;
@@ -84,7 +84,7 @@ input[type="button"], input[type="submit"]{
     transition: 0.3s;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover{
+input[type="button"]:hover{
   background: linear-gradient(to right, black, grey);
   cursor: pointer;
   border-width: 2px;
@@ -226,3 +226,4 @@ input[type="button"]:hover, input[type="submit"]:hover{
 .menu.active .toggle{
     transform: rotate(315deg);
 }
+

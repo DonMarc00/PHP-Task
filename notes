@@ -1,12 +1,7 @@
-TODO: Kryptowährung
-TODO: Bei Tabellentechnik mit for-schleife arbeiten, dass er nicht motzt
-TODO: Glitch Effekt entfernen
-TODO: Kryptographie.html
-
 Noch ebnötigte Eingabeelemente:
-- Mehrfachsauswahl
 
 Eingabeelemente: 
+- Mehrfachsauswahl
 - Radiobutton
 - Chceckbox
 - Textfeld
@@ -14,6 +9,9 @@ Eingabeelemente:
 - Einfachauswahl
 
 Erledigt: 
+TODO: Kryptographie.html
+TODO: Bei Tabellentechnik mit for-schleife arbeiten
+TODO: Kryptowährung
 TODO: Kryptographie
 
 

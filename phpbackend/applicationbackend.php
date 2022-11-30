@@ -13,7 +13,7 @@
 <body>
     <div class="glitch">MyUtils
     </div>
-    <a href="index.html"><input type="button" class="home" value="Home"></a>
+    <a href="../index.html"><input type="button" class="home" value="Home"></a>
     <?php
     $fullname = "";
     if (isset($_POST["prof"]))

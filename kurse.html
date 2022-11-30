@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/kursesheet.css">
+</head>
+<body>
+    <div class="glitch">MyUtils </div>
+    <a href="index.html"><input type="button" class="home" value="Home"></a>
+    <div class="ltext">
+        Jeder würde gerne den Markt in Sachen Investment und Renditen schlagen. <br>
+        Wählen sie hier aus, welche Kurse von Kryptowährungen sie <br>
+        in einer Tabelle für die nächsten Jahre ausgegeben haben möchten.
+    </div>
+    <form action="phpbackend/kursebackend.php" method="post">
+        <p>
+        <label for="waehrung">Währungen Auswählen (mehrere Möglich)</label> <br>
+        <select name="waehrung[]" id="waehrung" multiple="multiple">
+            <option value="bitcoin"selected>Bitcoin</option>
+            <option value="etherium">Etherium</option>
+            <option value="binancecoin">Binance Coin</option>
+            <option value="litecoin">Litecoin</option>
+        </select>
+    </p> <br>
+        <p>
+        <label for="zeit">Für die nächsten</label> <br>
+        <select name="zeit" id="zeit">
+            <option value="3">3 Jahre</option>
+            <option value="5">5 Jahre</option>
+            <option value="7">7 Jahre</option>
+        </select>
+    </p> <br>
+    <input type="submit" value="Senden">
+    </form>
+</body>
+</html>

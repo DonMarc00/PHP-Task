@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/textarea.css">
 </head>
 <body>
-<a href="../calculator.html"><input type="button" value="Zurück" class="back"></a>
+<a href="../kryptographie.html"><input type="button" value="Zurück" class="back"></a>
 <div class="glitch">MyUtils </div>
     <a href="../index.html"><input type="button" class="home" value="Home"></a>
     <div class="desc">Hier können sie Text verschlüsseln und entschlüsseln</div>
