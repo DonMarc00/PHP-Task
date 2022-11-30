@@ -13,7 +13,7 @@
 <body>
     <a href="../kurse.html"><input type="button" value="Zurück" class="back"></a>
     <div class="glitch">MyUtils </div>
-    <a href="index.html"><input type="button" class="home" value="Home"></a>
+    <a href="../index.html"><input type="button" class="home" value="Home"></a>
     <?php
 
 
