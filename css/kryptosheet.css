@@ -3,7 +3,10 @@
     grid-row: 2/ span 1;
 }
 
-
+.out{
+  grid-column: 2 / span 1;
+  grid-row: 2/ span 1;
+}
 
 .selection{
     grid-column: 3 / span 1;
@@ -46,3 +49,4 @@ input[type="submit"]:hover{
     left: 80%;
     top: 40%;
   }
+

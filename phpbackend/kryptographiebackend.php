@@ -13,7 +13,6 @@
 <a href="../kryptographie.html"><input type="button" value="Zurück" class="back"></a>
 <div class="glitch">MyUtils </div>
     <a href="../index.html"><input type="button" class="home" value="Home"></a>
-    <div class="desc">Hier können sie Text verschlüsseln und entschlüsseln</div>
     <?php
      $type = $_POST["type"];
      $input = $_POST["ta"];
